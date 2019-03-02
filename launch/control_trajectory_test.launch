@@ -1,0 +1,12 @@
+<launch>
+
+    <node name="fg_control" pkg="flightgoggles_gnc" type="fg_control" respawn="false" output="screen"> 
+        <rosparam command="load" file="$(find flightgoggles_gnc)/config/control_params.yaml" />
+    </node>
+
+    <!-- Test Trajectory Control Node -->
+    <node name="control_trajectory_test" pkg="flightgoggles_gnc" type="control_trajectory_test" output="screen"/> 
+
+	
+
+</launch>

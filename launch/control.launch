@@ -1,0 +1,8 @@
+<launch>
+    <node name="fg_control" pkg="flightgoggles_gnc" type="fg_control" respawn="false" output="screen"> 
+        <rosparam command="load" file="$(find flightgoggles_gnc)/config/control_params.yaml" />
+    </node>
+
+    
+
+</launch>

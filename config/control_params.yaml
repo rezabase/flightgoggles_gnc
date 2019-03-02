@@ -1,0 +1,40 @@
+# -------------- PARAMETERS Simulated quadcopter physical parameters --------------
+mass: 1.0   #mass [kg]
+
+L: 0.08     #distance from vehicle origin to motors [m]
+
+Ixx: 0.0049 
+Iyy: 0.0049
+Izz: 0.0049 #mass moment of inertia / second moment of inertia
+kappa: 0.016 #ratio between thrust [N] and torque due to drag [N m]. torque = kappa * thrust
+
+minMotorThrust: 0.1
+maxMotorThrust: 7 #4.5
+
+# **** DRONE Constants to tune:
+  
+#Position control gains
+kpPosXY: 7
+kpPosZ: 10 
+KiPosZ: 0.65  
+
+#Velocity Control Gains (D term)
+kpVelXY: 4
+kpVelZ: 4
+
+#Angle control gains
+kpBank: 0.3
+kpYaw: 2
+
+#V3F Angle rate gains
+kpPQR_x: 2
+kpPQR_y: 2
+kpPQR_z: 2
+   
+#Limits & saturations
+maxAscentRate: 5
+maxDescentRate: 2
+maxSpeedXY: 5
+maxAccelXY: 12
+maxTiltAngle: 0.7
+

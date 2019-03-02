@@ -1,0 +1,16 @@
+<launch>
+
+    <node name="fg_control" pkg="flightgoggles_gnc" type="fg_control" respawn="false" output="screen"> 
+        <rosparam command="load" file="$(find flightgoggles_gnc)/config/control_params.yaml" />
+    </node>
+
+    <!-- Manual Tuning node -->
+    <node name="control_manual_tune" pkg="flightgoggles_gnc" type="control_manual_tune" output="screen"/> 
+    <!-- dynamic reconfiguration GUI-->
+    <node name="rqt_reconfigure" pkg="rqt_reconfigure" type="rqt_reconfigure"/> 
+
+    <!-- Multi Plot to see the result-->
+    <node name="rqt_multiplot" pkg="rqt_multiplot" type="rqt_multiplot"/> 
+	
+
+</launch>
